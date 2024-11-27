@@ -18,13 +18,40 @@ public class MyString {
 
     /** Returns the lowercase version of the given string. */
     public static String lowerCase(String str) {
-        // Replace the following statement with your code
-        return null;
-    }
+        int length =str.length();
+        char[] copy = str.toCharArray();
+        for(int i=0;i<length;i++)
+        {
+        if (str.charAt(i)>='A' && str.charAt(i)<='Z')
+        {
+            copy[i] = (char)(copy[i] + 32);
+        }
+        }
+        return new String(copy);
+        }
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
-        // Replace the following statement with your code
+        char[] one = str1.toCharArray();
+        char[] two = str2.toCharArray();
+        int counter=0; 
+        if (str1.length()<str2.length())return false;
+        else
+        {
+        boolean result=true;
+        for (int i=0;i<=one.length-two.length;i++)     
+        { 
+        for (int u=0; u<two.length;u++)
+        {
+        if(one[i+u]!=two[u])
+        {
+        result=false;  
+        break;
+        }  
+        }   
+        if (result==true)return true;
+        }
+        }
         return false;
-    }
+}
 }
