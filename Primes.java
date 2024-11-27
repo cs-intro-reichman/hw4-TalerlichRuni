@@ -4,17 +4,17 @@ public class Primes {
         boolean[] primes = new boolean[number+1];
         primes[0]=false;
         primes[1]=false;
-        for(int i=2;i<number;i++)
+        for(int i=2;i<=number;i++)
         {
         primes[i]=true;
         }
 
         int p=2;
-        while(p<Math.sqrt(number)){
+        while(p<=Math.sqrt(number)){
         if (primes[p]==true){
-        for(int i=p+1;i<primes.length;i++)
+        for(int i=p*p;i<=number;i+=p)
         {
-        if (i%p ==0)primes[i]=false;
+        primes[i]=false;
         }  
         }
         p++;

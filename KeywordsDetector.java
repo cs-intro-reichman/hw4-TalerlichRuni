@@ -38,9 +38,9 @@ public class KeywordsDetector {
             if (str1.length()<str2.length())return false;
             else
             {
-            boolean result=true;
             for (int i=0;i<=one.length-two.length;i++)     
             { 
+            boolean result=true;    
             for (int u=0; u<two.length;u++)
             {
             if(one[i+u]!=two[u])
